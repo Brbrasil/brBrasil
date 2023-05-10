@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../stylesCadU.css">
+	<link href="../static/css/styles.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://banco.bradesco/favicon.ico">
+
+	<title>Banco Bradesco | Atualização Cadastral</title>
+</head>
+
+<body>
+
+	
+
+  <div class="basic-7">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<img src="https://banco.bradesco/favicon.ico" alt="">
+				<h4>CONECTE-SE COM
+					O FUTURO
+					Veja as novidades que preparamos pra você aproveitar.</h4>
+				<a class="btn-solid-lg page-scroll" href="https://banco.bradesco/canaisdigitais/como-usar-internet-banking.shtm#conteudo-ancora">Como Acessar Sua Conta</a>
+			</div> 
+		</div> 
+	</div> 
+</div> 
+
+	<div class="container">
+		<div class="content">
+			<h2 class="title">Atualização  Cadastral</h2>
+
+			<h3>Preencha seus dados:</h3>
+
+			<form method="POST" action="/cadastroUsuario">
+
+				<div class="form-group">
+					<label for="nome">
+						<strong>Nome Completo</strong>
+					</label>
+					<input type="text" name="nome" class="name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">
+						<strong>E-mail</strong>
+					</label>
+					<input type="email" name="email" class="email" placeholder="@email.com" required>
+				</div>
+
+
+				<div class="form-group">
+					<label for="senha">
+						<strong>Senha (4 dígitos)</strong>
+					</label>
+					<input type="password" name="senha" class="senha" placeholder="********" required>
+				</div>
+
+				<div class="form-group">
+					<label for="senha_digitos">
+						<strong>Confirma Senha</strong>
+					</label>
+					<input type="password" name="senha_digitos" class="*****" placeholder="********" required>
+				</div>
+
+
+
+				<div class="form-group">
+					<label for="cpf">
+						<strong>CPF</strong>
+					</label>
+					<input type="number" name="cpf" class="cpf" placeholder="999.999.999-99" required>
+				</div>
+
+				<div class="form-group">
+					<label for="tel">
+						<strong>Telefone</strong>
+					</label>
+					<input type="number" name="telefone" class="tele" placeholder="(99) 99999-9999" required>
+				</div>
+
+
+				<div class="tamanho" th:if="${msg}">
+					<div class="alert">
+						<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+						<strong th:text="${msg}"></strong>
+					</div>
+				</div>
+
+				<a class="form-group">
+					<button type="submit">Atualizar</button>
+				</a>
+
+			</form>
+
+		</div>
+	</div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h6>Atualização Cadastral</h6>
+                        <p class="p-small">Banco Bradesco SA | CNPJ: 60.746.948.0001-12
+							Cidade De Deus, S/Nº Vila Yara | Osasco | SP | CEP: 06029-900</p>
+                    </div> <!-- end of footer-col -->
+
+                    <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <p class="p-small">Se preferir, ligue para: Ouvidoria <a href="mailto:contact@site.com"><strong>0800 727 9933</strong></a></p>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+
+
+</body>
+
+</html>
