@@ -34,11 +34,11 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
     @PostMapping("/cadastroUsuario")
-    public String cadastrarUsuario(String nome, String email, String cpf, String senha, 
+    public String cadastrarUsuario(String nome, String email, String cpf, String agencia, String conta, String senha, 
             String telefone, String senha_digitos, RedirectAttributes redirAttrs) throws Exception {
 
         boolean salvouSimNao = usuarioService
-                .salvarUsuario(new Usuario(null, nome, email, cpf, senha, telefone, senha_digitos, senha_digitos));
+                .salvarUsuario(new Usuario(null, nome, email, cpf, agencia, conta, senha, telefone, senha_digitos, senha_digitos));
 
         if (salvouSimNao == false) {
             redirAttrs.addFlashAttribute("msg", "Esse CPF já está cadastrado!");

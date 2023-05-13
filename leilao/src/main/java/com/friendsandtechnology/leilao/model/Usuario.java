@@ -14,6 +14,8 @@ public class Usuario implements Serializable {
     private String nome;
     private String email;
     private String cpf;
+    private String agencia;
+    private String conta;
     private String senha;
     private String telefone;
     private String senha_digitos;
@@ -22,13 +24,15 @@ public class Usuario implements Serializable {
 
     }
 
-    public Usuario(String id, String nome, String email, String senha, String cpf,
+    public Usuario(String id, String nome, String email, String senha, String cpf,String agencia, String conta,
             String telefone, String endereco, String senha_digitos) {
         super();
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
+        this.agencia = agencia;
+        this.conta = conta;
         this.senha = senha;
         this.telefone = telefone;
         this.senha_digitos = senha_digitos;
@@ -66,6 +70,22 @@ public class Usuario implements Serializable {
 		this.cpf = cpf;
 	}
 
+	public String getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+
+	public String getConta() {
+		return conta;
+	}
+
+	public void setConta(String conta) {
+		this.conta = conta;
+	}
+
 	public String getSenha() {
 		return senha;
 	}
@@ -94,7 +114,5 @@ public class Usuario implements Serializable {
 		return serialVersionUID;
 	}
 
-
-	
 
 }
