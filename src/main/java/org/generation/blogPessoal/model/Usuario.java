@@ -53,12 +53,14 @@ public class Usuario {
 	
 	@Size(max = 11, message = "O link da foto não pode ser maior do que 5000 caractéres")
 	private String telefone;
+	
+	private String tipo_conta;
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 
-	public Usuario(Long id, String nome, String agencia, String conta, String usuario, String senha, String senha_digitos, String cpf, String telefone) {
+	public Usuario(Long id, String nome, String agencia, String conta, String usuario, String senha, String senha_digitos, String cpf, String telefone, String tipo_conta) {
 		this.id = id;
 		this.nome = nome;
 		this.agencia = agencia;
@@ -68,6 +70,8 @@ public class Usuario {
 		this.senha_digitos = senha_digitos;
 		this.cpf = cpf;
 		this.telefone = telefone;
+		this.tipo_conta = tipo_conta;
+		
 		
 	}
 
@@ -145,6 +149,14 @@ public class Usuario {
 		this.telefone = telefone;
 	}
 
+	public String getTipo_conta() {
+		return tipo_conta;
+	}
+
+	public void setTipo_conta(String tipo_conta) {
+		this.tipo_conta = tipo_conta;
+	}
+
 	public List<Postagem> getPostagem() {
 		return postagem;
 	}
@@ -153,6 +165,6 @@ public class Usuario {
 		this.postagem = postagem;
 	}
 
-	/* Insira os Getters and Setters */
+
 
 }

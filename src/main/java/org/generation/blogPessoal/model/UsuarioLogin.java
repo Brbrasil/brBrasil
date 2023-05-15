@@ -21,6 +21,8 @@ public class UsuarioLogin {
 	private String cpf;
 	
 	private String telefone;
+	
+	private String tipo_conta;
 
 	public long getId() {
 		return id;
@@ -101,8 +103,15 @@ public class UsuarioLogin {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
-	/* Insira os Getters and Setters */
+
+	public String getTipo_conta() {
+		return tipo_conta;
+	}
+
+	public void setTipo_conta(String tipo_conta) {
+		this.tipo_conta = tipo_conta;
+	}
+
 	
 
 }	
