@@ -35,9 +35,7 @@ public class Usuario {
 	@Size(max = 10, message = "O link da foto não pode ser maior do que 5000 caractéres")
 	private String conta;
 	
-	
-	@Schema(example = "email@email.com.br")
-	@Email(message = "O atributo Usuário deve ser um email válido!")
+	@Size(max = 10, message = "")
 	private String usuario;
 
 	@NotBlank(message = "O atributo Senha é Obrigatório!")
