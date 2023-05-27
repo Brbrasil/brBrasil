@@ -32,10 +32,10 @@ public class Usuario {
 	@Size(max = 5, message = "O link da foto não pode ser maior do que 5000 caractéres")
 	private String agencia;
 	
-	@Size(max = 10, message = "O link da foto não pode ser maior do que 5000 caractéres")
+	@Size(max = 50, message = "O link da foto não pode ser maior do que 5000 caractéres")
 	private String conta;
 	
-	@Size(max = 10, message = "")
+	@Size(max = 15, message = "")
 	private String usuario;
 
 	@NotBlank(message = "O atributo Senha é Obrigatório!")
@@ -45,10 +45,10 @@ public class Usuario {
 	@Size(max = 4, message = "O link da foto não pode ser maior do que 5000 caractéres")
 	private String senha_digitos;
 	
-	@Size(max = 11, message = "O link da foto não pode ser maior do que 5000 caractéres")
+	@Size(max = 15, message = "O link da foto não pode ser maior do que 5000 caractéres")
 	private String cpf;
 	
-	@Size(max = 11, message = "O link da foto não pode ser maior do que 5000 caractéres")
+	@Size(max = 15, message = "O link da foto não pode ser maior do que 5000 caractéres")
 	private String telefone;
 	
 	private String tipo_conta;
